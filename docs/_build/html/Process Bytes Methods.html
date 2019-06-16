@@ -1,0 +1,256 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.3. Methods related to Bytes Processing &mdash; USBtin Library 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="USBtin Library 1.0 documentation" href="index.html"/>
+        <link rel="up" title="1. USBTin Library" href="Class USBTin.html"/>
+        <link rel="next" title="2. Supplementary modules/libraries" href="Other.html"/>
+        <link rel="prev" title="1.2. Methods related with CAN bus" href="CAN Channel Methods.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> USBtin Library
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="Class USBTin.html">1. USBTin Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="USBTin Methods.html">1.1. Methods related with USBtin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CAN Channel Methods.html">1.2. Methods related with CAN bus</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">1.3. Methods related to Bytes Processing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Other.html">2. Supplementary modules/libraries</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">USBtin Library</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="Class USBTin.html">1. USBTin Library</a> &raquo;</li>
+      
+    <li>1.3. Methods related to Bytes Processing</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Process Bytes Methods.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="methods-related-to-bytes-processing">
+<h1>1.3. Methods related to Bytes Processing<a class="headerlink" href="#methods-related-to-bytes-processing" title="Permalink to this headline">¶</a></h1>
+<p>The below methods are related with the procedural followed
+when data arrives to the USBtin buffer. These data could come
+either from the CAN bus or from itself - being an answer to a
+user command.</p>
+<p>These methods are transparent because the user does not need to
+call them - they are always running through the FSM Thread.</p>
+<p>The provided documentation could be used for future implementations
+in other modules.</p>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="usbTinLib.USBTin.FSM">
+<code class="descclassname">USBTin.</code><code class="descname">FSM</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#usbTinLib.USBTin.FSM" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finite State Machine is in charge of classifying data received from USBTin.
+If state == STATE_INI, a new frame is started.
+If state == STATE_MSG or STATE_RPS, the data will be added to the previous started frame.
+When the carriage return is read as data, the frame will be added to the corresponding queue (RPSqueue or MSGqueue, depending on state)</p>
+<dl class="docutils">
+<dt>Paramaters:</dt>
+<dd><ul class="first last simple">
+<li>data (byte): Byte of data read from USBTin buffer</li>
+</ul>
+</dd>
+<dt>Returns:</dt>
+<dd>None</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="usbTinLib.USBTin.processBytes">
+<code class="descclassname">USBTin.</code><code class="descname">processBytes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#usbTinLib.USBTin.processBytes" title="Permalink to this definition">¶</a></dt>
+<dd><p>If USBTin buffer is not empty, Finite State Machine function is executed.
+processBytes is the run function in the periodic thread &#8220;FSMThread&#8221;</p>
+<dl class="docutils">
+<dt>Parameters:</dt>
+<dd>None</dd>
+<dt>Returns:</dt>
+<dd>None</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Other.html" class="btn btn-neutral float-right" title="2. Supplementary modules/libraries" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="CAN Channel Methods.html" class="btn btn-neutral" title="1.2. Methods related with CAN bus" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Guillermo Pérez.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

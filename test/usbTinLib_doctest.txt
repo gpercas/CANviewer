@@ -1,0 +1,59 @@
+
+>>> import usbTinLib as usb
+>>> import time
+
+>>> usb1=usb.USBTin('COM4','BAUD_125K','Normal')
+Port is opened.
+
+
+>>> usb1.askHWversion()
+'V0100'
+
+>>> usb1.askFWversion()
+'v0105'
+
+>>> usb2=usb.USBTin('COM5','BAUD_125K','Normal')
+Port is opened.
+
+>>> usb2.askHWversion()
+'V0100'
+
+>>> usb2.askFWversion()
+'v0105'
+
+>>> usb1.canOpenChannel()
+Baudrate is set successfully
+CAN Channel opened in normal mode
+0
+
+>>> usb2.canOpenChannel()
+Baudrate is set successfully
+CAN Channel opened in normal mode
+0
+
+>>> usb1.canWrite('131',4,['11','22','33','44'],0x0002)
+Message received
+0
+
+>>> time.sleep(0.3)
+
+>>> usb2.canReadMessage()
+['Standard', '131', '4', '11223344']
+
+>>> usb2.canWrite('3344',6,['1A','2B','3C','4D','11','22'],0x0004)
+Message received
+0
+
+>>> time.sleep(0.3)
+
+>>> usb1.canReadMessage()
+['Extended', '00003344', '6', '1A2B3C4D1122']
+
+>>> usb1.closeSerial()
+CAN Channel closed
+Port is closed.
+
+>>> usb2.closeSerial()
+CAN Channel closed
+Port is closed.
+

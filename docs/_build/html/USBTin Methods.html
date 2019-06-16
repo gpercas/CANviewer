@@ -1,0 +1,332 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.1. Methods related with USBtin &mdash; USBtin Library 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="USBtin Library 1.0 documentation" href="index.html"/>
+        <link rel="up" title="1. USBTin Library" href="Class USBTin.html"/>
+        <link rel="next" title="1.2. Methods related with CAN bus" href="CAN Channel Methods.html"/>
+        <link rel="prev" title="1. USBTin Library" href="Class USBTin.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> USBtin Library
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="Class USBTin.html">1. USBTin Library</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">1.1. Methods related with USBtin</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="CAN Channel Methods.html">1.2. Methods related with CAN bus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Process Bytes Methods.html">1.3. Methods related to Bytes Processing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Other.html">2. Supplementary modules/libraries</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">USBtin Library</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="Class USBTin.html">1. USBTin Library</a> &raquo;</li>
+      
+    <li>1.1. Methods related with USBtin</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/USBTin Methods.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="methods-related-with-usbtin">
+<h1>1.1. Methods related with USBtin<a class="headerlink" href="#methods-related-with-usbtin" title="Permalink to this headline">¶</a></h1>
+<p>The following methods just involve functions of USBtin and the communication
+User &lt;&#8212;&gt; USBtin.</p>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="usbTinLib.USBTin.openSerial">
+<code class="descclassname">USBTin.</code><code class="descname">openSerial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#usbTinLib.USBTin.openSerial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs a series of actions to establish a communication between the user (PC) and USBtin:</p>
+<ol class="arabic simple">
+<li>Open the serial port.</li>
+<li>Initialize Periodic Thread for Finite State Machine function</li>
+</ol>
+<dl class="docutils">
+<dt>Parameters:</dt>
+<dd>None</dd>
+<dt>Returns:</dt>
+<dd>None
+(Print to the console if port is opened or it have raised an exception)</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="usbTinLib.USBTin.closeSerial">
+<code class="descclassname">USBTin.</code><code class="descname">closeSerial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#usbTinLib.USBTin.closeSerial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs a series of actions to end the communication between the user (PC) and USBtin:</p>
+<ol class="arabic simple">
+<li>Stop Periodic Thread for Finite State Machine function</li>
+<li>Close the CAN channel (if it is opened</li>
+<li>Close the serial port</li>
+</ol>
+<dl class="docutils">
+<dt>Parameters:</dt>
+<dd>None</dd>
+<dt>Returns:</dt>
+<dd>None
+(Print to the console when the port is closed)</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="usbTinLib.USBTin.askHWversion">
+<code class="descclassname">USBTin.</code><code class="descname">askHWversion</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#usbTinLib.USBTin.askHWversion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get hardware USBtin version.</p>
+<dl class="docutils">
+<dt>Parameters:</dt>
+<dd>None</dd>
+<dt>Returns:</dt>
+<dd>String indicating hardware version</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="usbTinLib.USBTin.askFWversion">
+<code class="descclassname">USBTin.</code><code class="descname">askFWversion</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#usbTinLib.USBTin.askFWversion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get firmware USBtin version.</p>
+<dl class="docutils">
+<dt>Parameters:</dt>
+<dd>None</dd>
+<dt>Returns:</dt>
+<dd>String indicating hardware version</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="usbTinLib.USBTin.askUSBstatus">
+<code class="descclassname">USBTin.</code><code class="descname">askUSBstatus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#usbTinLib.USBTin.askUSBstatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read status/error flag of can controller</p>
+<dl class="docutils">
+<dt>Parameters:</dt>
+<dd>None</dd>
+<dt>Returns: </dt>
+<dd><p class="first">Fxx[CR] with xx as hexadecimal byte with following error flags:</p>
+<p>Bit 0 - not used</p>
+<p>Bit 1 - not used</p>
+<p>Bit 2 - Error warning (Bit EWARN of MCP2515)</p>
+<p>Bit 3 - Data overrun (Bit RX1OVR or RX0OVR of MCP2515)</p>
+<p>Bit 4 - not used</p>
+<p>Bit 5 - Error-Passive (Bit TXEP or RXEP of MCP2515)</p>
+<p>Bit 6 - not used</p>
+<p class="last">Bit 7 - Bus error (Bit TXBO of MCP2515)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="usbTinLib.USBTin.SerialSetTimestamping">
+<code class="descclassname">USBTin.</code><code class="descname">SerialSetTimestamping</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#usbTinLib.USBTin.SerialSetTimestamping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set time stamping on/off</p>
+<dl class="docutils">
+<dt>Parameters:</dt>
+<dd><ul class="first simple">
+<li>x (bin):</li>
+</ul>
+<p class="last">0: off
+1: on</p>
+</dd>
+<dt>Returns:</dt>
+<dd>None
+(Print to the console if the Time stamping is now on/off/or there is an input error)</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="usbTinLib.USBTin.ReadResponse">
+<code class="descclassname">USBTin.</code><code class="descname">ReadResponse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#usbTinLib.USBTin.ReadResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads and process elements (responses) from RPSqueue (instance attribute)</p>
+<dl class="docutils">
+<dt>Parameters:</dt>
+<dd>None</dd>
+<dt>Returns:</dt>
+<dd><ul class="first last simple">
+<li>Different strings or constants depending on the response to previous messages (indicated on each method)</li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="CAN Channel Methods.html" class="btn btn-neutral float-right" title="1.2. Methods related with CAN bus" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Class USBTin.html" class="btn btn-neutral" title="1. USBTin Library" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Guillermo Pérez.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

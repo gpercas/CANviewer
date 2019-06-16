@@ -1,0 +1,272 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.1. ConstantsUSB Module &mdash; USBtin Library 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="USBtin Library 1.0 documentation" href="index.html"/>
+        <link rel="up" title="2. Supplementary modules/libraries" href="Other.html"/>
+        <link rel="next" title="2.2. PeriodicThread Module" href="PeriodicThread.html"/>
+        <link rel="prev" title="2. Supplementary modules/libraries" href="Other.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> USBtin Library
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Class USBTin.html">1. USBTin Library</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="Other.html">2. Supplementary modules/libraries</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">2.1. ConstantsUSB Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PeriodicThread.html">2.2. PeriodicThread Module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">USBtin Library</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="Other.html">2. Supplementary modules/libraries</a> &raquo;</li>
+      
+    <li>2.1. ConstantsUSB Module</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Constants.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="constantsusb-module">
+<h1>2.1. ConstantsUSB Module<a class="headerlink" href="#constantsusb-module" title="Permalink to this headline">¶</a></h1>
+<p>The constantsUSB module contain all the constants used
+in USBTin library main module such as integer constants to
+raise CAN Errors or string constants to start USBtin commands.</p>
+<p>A copy of the module with all the constants is shown below.</p>
+<span class="target" id="module-constantsUSB"></span><div class="highlight-python"><div class="highlight"><pre><span class="sd">&quot;&quot;&quot;USBTin Constants&quot;&quot;&quot;</span>
+<span class="c">#USBTin Responses</span>
+<span class="n">CR</span><span class="o">=</span><span class="s">&#39;</span><span class="se">\x0D</span><span class="s">&#39;</span> 			<span class="c"># Carriage Return (\r)</span>
+<span class="n">LF</span><span class="o">=</span><span class="s">&#39;</span><span class="se">\x0A</span><span class="s">&#39;</span>			<span class="c"># Line Feed (\n)</span>
+<span class="n">usb_ERR</span><span class="o">=</span><span class="s">&#39;</span><span class="se">\x07</span><span class="s">&#39;</span>
+
+
+<span class="c">#USBtin Command Strings</span>
+
+<span class="n">usb_READSTATUS</span><span class="o">=</span><span class="s">&#39;F&#39;</span>
+<span class="n">usb_TIMESTAMPING</span><span class="o">=</span><span class="s">&#39;Z&#39;</span>
+<span class="n">usb_VERSION_FW</span><span class="o">=</span><span class="s">&#39;v&#39;</span>
+<span class="n">usb_VERSION_HW</span><span class="o">=</span><span class="s">&#39;V&#39;</span>
+<span class="n">usb_MSG_RECEIVED</span><span class="o">=</span><span class="s">&#39;z&#39;</span>
+<span class="n">can_CLOSE</span><span class="o">=</span><span class="s">&#39;C&#39;</span>
+<span class="n">can_OPEN_LOOPBACK</span><span class="o">=</span><span class="s">&#39;l&#39;</span>
+<span class="n">can_OPEN_LISTENONLY</span><span class="o">=</span><span class="s">&#39;L&#39;</span>
+<span class="n">can_OPEN_NORMALMODE</span><span class="o">=</span><span class="s">&#39;O&#39;</span>
+<span class="n">can_FILTER_MASK</span><span class="o">=</span><span class="s">&#39;m&#39;</span>
+<span class="n">can_FILTER_CODE</span><span class="o">=</span><span class="s">&#39;M&#39;</span>
+<span class="n">can_SETBITRATE</span><span class="o">=</span><span class="s">&#39;S&#39;</span>
+
+<span class="n">can_NORMALMODE</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">can_LOOPBACK</span><span class="o">=</span><span class="mi">2</span>
+<span class="n">can_LISTENONLY</span><span class="o">=</span><span class="mi">3</span>
+
+<span class="c">#FSM State Constants</span>
+<span class="n">STATE_INI</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">STATE_MSG</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">STATE_RPS</span><span class="o">=</span><span class="mi">2</span>
+
+<span class="c">#Message Sending Command Characters</span>
+<span class="n">CHR_r</span><span class="o">=</span><span class="s">&#39;r&#39;</span>		<span class="c"># RTR Standard ID</span>
+<span class="n">CHR_cR</span><span class="o">=</span><span class="s">&#39;R&#39;</span>		<span class="c"># RTR Extended ID</span>
+<span class="n">CHR_t</span><span class="o">=</span><span class="s">&#39;t&#39;</span>		<span class="c"># Standard ID</span>
+<span class="n">CHR_cT</span><span class="o">=</span><span class="s">&#39;T&#39;</span>		<span class="c"># Extended ID </span>
+
+<span class="c">#CAN Error Constants</span>
+<span class="n">canERR_OK</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">canERR_KO</span><span class="o">=-</span><span class="mi">1</span>
+<span class="n">canERR_NOMSG</span><span class="o">=-</span><span class="mi">2</span>
+<span class="n">canERR_NORPS</span><span class="o">=-</span><span class="mi">2</span>
+<span class="n">canERR_PARAM</span><span class="o">=-</span><span class="mi">1</span>
+
+<span class="c">#canWrite Message Masks</span>
+<span class="n">canMSG_RTR</span>              <span class="o">=</span><span class="mh">0x0001</span>      <span class="c"># Message is a remote request</span>
+<span class="n">canMSG_STD</span>              <span class="o">=</span><span class="mh">0x0002</span>      <span class="c"># Message has a standard ID</span>
+<span class="n">canMSG_EXT</span>              <span class="o">=</span><span class="mh">0x0004</span> 	 <span class="c"># Message has a extended ID</span>
+
+
+<span class="c">#Bitrate Dictionaries</span>
+<span class="n">BAUD</span><span class="o">=</span><span class="p">{</span><span class="s">&quot;BAUD_10K&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="s">&quot;BAUD_20K&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s">&quot;BAUD_50K&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s">&quot;BAUD_100K&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s">&quot;BAUD_125K&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> 
+<span class="s">&quot;BAUD_250K&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="s">&quot;BAUD_500K&quot;</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span> <span class="s">&quot;BAUD_800K&quot;</span><span class="p">:</span><span class="mi">7</span><span class="p">,</span> <span class="s">&quot;BAUD_1M&quot;</span><span class="p">:</span><span class="mi">8</span><span class="p">}</span>
+
+<span class="n">canBITRATE</span><span class="o">=</span><span class="p">{</span><span class="s">&quot;canBITRATE_10K&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s">&quot;canBITRATE_20K&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;canBITRATE_50K&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="s">&quot;canBITRATE_100K&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="s">&quot;canBITRATE_125K&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span>
+<span class="s">&quot;canBITRATE_250K&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="s">&quot;canBITRATE_500K&quot;</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span><span class="s">&quot;canBITRATE_800K&quot;</span><span class="p">:</span><span class="mi">7</span><span class="p">,</span><span class="s">&quot;canBITRATE_1M&quot;</span><span class="p">:</span><span class="mi">8</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="PeriodicThread.html" class="btn btn-neutral float-right" title="2.2. PeriodicThread Module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Other.html" class="btn btn-neutral" title="2. Supplementary modules/libraries" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Guillermo Pérez.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,357 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.2. Methods related with CAN bus &mdash; USBtin Library 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="USBtin Library 1.0 documentation" href="index.html"/>
+        <link rel="up" title="1. USBTin Library" href="Class USBTin.html"/>
+        <link rel="next" title="1.3. Methods related to Bytes Processing" href="Process Bytes Methods.html"/>
+        <link rel="prev" title="1.1. Methods related with USBtin" href="USBTin Methods.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> USBtin Library
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="Class USBTin.html">1. USBTin Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="USBTin Methods.html">1.1. Methods related with USBtin</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">1.2. Methods related with CAN bus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Process Bytes Methods.html">1.3. Methods related to Bytes Processing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Other.html">2. Supplementary modules/libraries</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">USBtin Library</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="Class USBTin.html">1. USBTin Library</a> &raquo;</li>
+      
+    <li>1.2. Methods related with CAN bus</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/CAN Channel Methods.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="methods-related-with-can-bus">
+<h1>1.2. Methods related with CAN bus<a class="headerlink" href="#methods-related-with-can-bus" title="Permalink to this headline">¶</a></h1>
+<p>The following methods are related with the CAN bus and its interaction
+with the USBtin - considerating each device as a node of the bus. The methods
+comprise the communication User &lt;&#8212;&gt; USBtin &lt;&#8212;&gt; CAN bus.</p>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="usbTinLib.USBTin.canOpenChannel">
+<code class="descclassname">USBTin.</code><code class="descname">canOpenChannel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#usbTinLib.USBTin.canOpenChannel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Opens the CAN channel in the mode specified on instance attributes.
+By default, the function is called inside openSerial function.</p>
+<dl class="docutils">
+<dt>Parameters:</dt>
+<dd>None</dd>
+<dt>Returns:</dt>
+<dd>None
+(Print to the console which CAN channel mode have been opened)</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="usbTinLib.USBTin.canClose">
+<code class="descclassname">USBTin.</code><code class="descname">canClose</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#usbTinLib.USBTin.canClose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Closes the CAN channel.
+By default, the function is called inside closeSerial function.</p>
+<dl class="docutils">
+<dt>Parameters:</dt>
+<dd>None</dd>
+<dt>Returns:</dt>
+<dd><ul class="first last simple">
+<li>ReadResponse method (constant canERR_OK)</li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="usbTinLib.USBTin.canSetBitrate">
+<code class="descclassname">USBTin.</code><code class="descname">canSetBitrate</code><span class="sig-paren">(</span><em>baudrate</em><span class="sig-paren">)</span><a class="headerlink" href="#usbTinLib.USBTin.canSetBitrate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets baudrate for the CAN channel. It must be set before CAN channel is opened.
+By default, canSetBitrate is called inside openSerial function (with self.baudrate as parameter).</p>
+<dl class="docutils">
+<dt>Parameters:</dt>
+<dd><ul class="first last simple">
+<li>baudrate: Defined by the keys in dictionaries BAUD or canBITRATE</li>
+</ul>
+</dd>
+<dt>Returns:</dt>
+<dd>None
+(Print to the console if the baudrate is set successfully)</dd>
+<dt>Raises:</dt>
+<dd>ValueError - if the baudrate value is not standarized nor contained in baudrate dictionaries from constantsUSB</dd>
+</dl>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">If there were multiple nodes, bitrate must be the same in every one.
+Otherwise a CAN Error could be raised and collapse the bus CAN.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="usbTinLib.USBTin.canWrite">
+<code class="descclassname">USBTin.</code><code class="descname">canWrite</code><span class="sig-paren">(</span><em>msgId</em>, <em>dlc</em>, <em>messageList</em>, <em>*mask</em><span class="sig-paren">)</span><a class="headerlink" href="#usbTinLib.USBTin.canWrite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes a message through the serial port to the CAN channel</p>
+<dl class="docutils">
+<dt>Parameters:</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>msgId (str) -  Message identifier</dt>
+<dd><ul class="first simple">
+<li>String in hexadecimal format between 000 to 7FF (Integer between 0 and 2047)for standard messages</li>
+<li>String in hexadecimal format between 00000000 to 1FFFFFFF (Integer between 0  and 536870911) for extended messages.</li>
+</ul>
+<p class="last">Zeros are autocompleted in case it is not given the complete expression.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>dlc (int) - Data Length Code. Indicates the number of data bytes in the message.</dt>
+<dd><ul class="first last simple">
+<li>Integer from 0 to 8.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>message (list of str - hex format) </dt>
+<dd><ul class="first last simple">
+<li>List of strings of data bytes in hexadecimal represntation. List length must be dlc.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>mask (int) - Multiple parameters can be defined</dt>
+<dd><ul class="first last simple">
+<li>0x0001: Remote Request Message</li>
+<li>0x0002: Standard ID Message</li>
+<li>0x0004: Extended ID Message</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt>Returns:</dt>
+<dd><ul class="first last simple">
+<li>ReadResponse method if the message was sent successfully (constant canERR_OK)</li>
+<li>Error: Explanation Strings if there has been some problem</li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>1) Be careful! If the msgId is not inside the interval Standard ID or Extended ID Message, the method will return an error.
+Moreover check that CAN channel communication is opened before sending any message.</p>
+<ol class="last arabic simple" start="2">
+<li>If RTR message mask is not defined explicitly, the message will be active (with data bytes).</li>
+<li>If the message is RTR, messageList should be an empty list. Otherwise it prints an error.</li>
+</ol>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Be careful! The msgId should be inside the interval Standard ID or Extended ID Message. Method will not raise any error as the USBtin adapts
+to this situations assigning an arbitrary value to the problematic byte of the identifier.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="usbTinLib.USBTin.canReadMessage">
+<code class="descclassname">USBTin.</code><code class="descname">canReadMessage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#usbTinLib.USBTin.canReadMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads and process elements (messages) from MSGqueue (instance attribute)</p>
+<dl class="docutils">
+<dt>Parameters:</dt>
+<dd>None</dd>
+<dt>Returns:</dt>
+<dd><ul class="first last simple">
+<li>List of strings with message in the following format: [msgId mode, msgId, dlc, msgData]</li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Process Bytes Methods.html" class="btn btn-neutral float-right" title="1.3. Methods related to Bytes Processing" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="USBTin Methods.html" class="btn btn-neutral" title="1.1. Methods related with USBtin" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Guillermo Pérez.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
