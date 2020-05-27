@@ -1,5 +1,5 @@
 # CAN Viewer
-Replica of USBTinLib library done by Thomas Fischl for USBTin devices(EmbedME/USBtinLib) for Python adding a GUI designed with Tkinter.
+Replica of USBTinLib library done by Thomas Fischl for USBTin devices (EmbedME/USBtinLib) for Python adding a GUI designed with Tkinter.
 
 The project was completed for my Final Degree Project (01-2016). More information: https://upcommons.upc.edu/handle/2117/99142
 
