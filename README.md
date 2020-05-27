@@ -9,7 +9,7 @@ Python library to manage the connections from/to the computer
 `import usbTinLib`
 
 ## GUI
-Graphic User Interface to manage one or multiple USBTin devices to serial ports in your computer. Useful to listen and send messages to a CAN channel.
+Graphic User Interface to manage one or multiple USBTin devices connected to serial ports in your computer. Useful to listen and send messages to a CAN channel.
 
 `python CANUSBviewer.py`
 
